@@ -1,0 +1,646 @@
+{
+	"info": {
+		"_postman_id": "6055d341-fd7c-4106-943e-d5478f3e6d39",
+		"name": "Laravel_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Company",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODZlM2U4NGM5NjAwZWY4Yjg3M2I1NGE0Yjk1ODYzN2VjZDRhNWQxNmY0ZjI2YmE2MDZhZWE1NzFlZjcyODRjNmIwMTA1YWY0MTllMTYyODUiLCJpYXQiOjE2MjMzNDg4MDYsIm5iZiI6MTYyMzM0ODgwNiwiZXhwIjoxNjU0ODg0ODA2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rR7jFQnLMimx4JGSZCojn5dJLjuyfpbGcwWOjamIO2wOC4SloeUHBJ73Z2uoHE7TbCupFuEjematifxvFQUqUxyCLJpHA2Qj9jhlcFCwCFStRtUD398XCq4p_t9emnW-nPniDREOkuzSLyZcY0DBrqJIWNBejWkgjY9AZDdxrHNzXdDsTFSVPlm9L05_0-pWiOTpmmBActZ8mh-ooldy0pc-IGDcqllj_c-MXOkK_Qh8rf0JomnTVjfUJG-BKRDR6xIrKsq_CPnmJZmMPMcXP_FWhR1xYeGc6yjuvNDymn8gPGB966RXZ7DSsS1anF4h-yZhmnVmlg9N7fBSLNqrk-1aFJ9b8C4RBrZoiEDywr0Xuv8twlH2XMQBjPRs8j3-aGw6v_FZnBMUG-VxpUg9eeDmMQ-e5qZ6mpWecqJt8_gpPZBEy-r5vyRaYDfUWJRbfsAAjvz3o46-1-iIfqy1JV73UX95Gke2Xp1CLB46KRVLvnXI8qHT1Hvd3HCG55hGa-JKhvCti5uXsaYStfr1K8YD22Rdxis2CmwbdxK0zySDSKePbjC5Yf-WmK9fbs2Hr9llau9ddJqBL_fI0n82n2pkuclac_G2K7wWo2RMER6KvnTZkMALzV4JG9Uyu_KMBON-ZOHaN5iI5g3Sl3fgXzt_k950T9zzouDOSSTSo9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/companies?name=test234&email=test@test1.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companies"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "test234",
+							"description": "required"
+						},
+						{
+							"key": "email",
+							"value": "test@test1.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "companies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODZlM2U4NGM5NjAwZWY4Yjg3M2I1NGE0Yjk1ODYzN2VjZDRhNWQxNmY0ZjI2YmE2MDZhZWE1NzFlZjcyODRjNmIwMTA1YWY0MTllMTYyODUiLCJpYXQiOjE2MjMzNDg4MDYsIm5iZiI6MTYyMzM0ODgwNiwiZXhwIjoxNjU0ODg0ODA2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rR7jFQnLMimx4JGSZCojn5dJLjuyfpbGcwWOjamIO2wOC4SloeUHBJ73Z2uoHE7TbCupFuEjematifxvFQUqUxyCLJpHA2Qj9jhlcFCwCFStRtUD398XCq4p_t9emnW-nPniDREOkuzSLyZcY0DBrqJIWNBejWkgjY9AZDdxrHNzXdDsTFSVPlm9L05_0-pWiOTpmmBActZ8mh-ooldy0pc-IGDcqllj_c-MXOkK_Qh8rf0JomnTVjfUJG-BKRDR6xIrKsq_CPnmJZmMPMcXP_FWhR1xYeGc6yjuvNDymn8gPGB966RXZ7DSsS1anF4h-yZhmnVmlg9N7fBSLNqrk-1aFJ9b8C4RBrZoiEDywr0Xuv8twlH2XMQBjPRs8j3-aGw6v_FZnBMUG-VxpUg9eeDmMQ-e5qZ6mpWecqJt8_gpPZBEy-r5vyRaYDfUWJRbfsAAjvz3o46-1-iIfqy1JV73UX95Gke2Xp1CLB46KRVLvnXI8qHT1Hvd3HCG55hGa-JKhvCti5uXsaYStfr1K8YD22Rdxis2CmwbdxK0zySDSKePbjC5Yf-WmK9fbs2Hr9llau9ddJqBL_fI0n82n2pkuclac_G2K7wWo2RMER6KvnTZkMALzV4JG9Uyu_KMBON-ZOHaN5iI5g3Sl3fgXzt_k950T9zzouDOSSTSo9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODZlM2U4NGM5NjAwZWY4Yjg3M2I1NGE0Yjk1ODYzN2VjZDRhNWQxNmY0ZjI2YmE2MDZhZWE1NzFlZjcyODRjNmIwMTA1YWY0MTllMTYyODUiLCJpYXQiOjE2MjMzNDg4MDYsIm5iZiI6MTYyMzM0ODgwNiwiZXhwIjoxNjU0ODg0ODA2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rR7jFQnLMimx4JGSZCojn5dJLjuyfpbGcwWOjamIO2wOC4SloeUHBJ73Z2uoHE7TbCupFuEjematifxvFQUqUxyCLJpHA2Qj9jhlcFCwCFStRtUD398XCq4p_t9emnW-nPniDREOkuzSLyZcY0DBrqJIWNBejWkgjY9AZDdxrHNzXdDsTFSVPlm9L05_0-pWiOTpmmBActZ8mh-ooldy0pc-IGDcqllj_c-MXOkK_Qh8rf0JomnTVjfUJG-BKRDR6xIrKsq_CPnmJZmMPMcXP_FWhR1xYeGc6yjuvNDymn8gPGB966RXZ7DSsS1anF4h-yZhmnVmlg9N7fBSLNqrk-1aFJ9b8C4RBrZoiEDywr0Xuv8twlH2XMQBjPRs8j3-aGw6v_FZnBMUG-VxpUg9eeDmMQ-e5qZ6mpWecqJt8_gpPZBEy-r5vyRaYDfUWJRbfsAAjvz3o46-1-iIfqy1JV73UX95Gke2Xp1CLB46KRVLvnXI8qHT1Hvd3HCG55hGa-JKhvCti5uXsaYStfr1K8YD22Rdxis2CmwbdxK0zySDSKePbjC5Yf-WmK9fbs2Hr9llau9ddJqBL_fI0n82n2pkuclac_G2K7wWo2RMER6KvnTZkMALzV4JG9Uyu_KMBON-ZOHaN5iI5g3Sl3fgXzt_k950T9zzouDOSSTSo9s",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/companies",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companies"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employees",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODZlM2U4NGM5NjAwZWY4Yjg3M2I1NGE0Yjk1ODYzN2VjZDRhNWQxNmY0ZjI2YmE2MDZhZWE1NzFlZjcyODRjNmIwMTA1YWY0MTllMTYyODUiLCJpYXQiOjE2MjMzNDg4MDYsIm5iZiI6MTYyMzM0ODgwNiwiZXhwIjoxNjU0ODg0ODA2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rR7jFQnLMimx4JGSZCojn5dJLjuyfpbGcwWOjamIO2wOC4SloeUHBJ73Z2uoHE7TbCupFuEjematifxvFQUqUxyCLJpHA2Qj9jhlcFCwCFStRtUD398XCq4p_t9emnW-nPniDREOkuzSLyZcY0DBrqJIWNBejWkgjY9AZDdxrHNzXdDsTFSVPlm9L05_0-pWiOTpmmBActZ8mh-ooldy0pc-IGDcqllj_c-MXOkK_Qh8rf0JomnTVjfUJG-BKRDR6xIrKsq_CPnmJZmMPMcXP_FWhR1xYeGc6yjuvNDymn8gPGB966RXZ7DSsS1anF4h-yZhmnVmlg9N7fBSLNqrk-1aFJ9b8C4RBrZoiEDywr0Xuv8twlH2XMQBjPRs8j3-aGw6v_FZnBMUG-VxpUg9eeDmMQ-e5qZ6mpWecqJt8_gpPZBEy-r5vyRaYDfUWJRbfsAAjvz3o46-1-iIfqy1JV73UX95Gke2Xp1CLB46KRVLvnXI8qHT1Hvd3HCG55hGa-JKhvCti5uXsaYStfr1K8YD22Rdxis2CmwbdxK0zySDSKePbjC5Yf-WmK9fbs2Hr9llau9ddJqBL_fI0n82n2pkuclac_G2K7wWo2RMER6KvnTZkMALzV4JG9Uyu_KMBON-ZOHaN5iI5g3Sl3fgXzt_k950T9zzouDOSSTSo9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employees",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"description": "request|emai",
+							"disabled": true
+						},
+						{
+							"key": null,
+							"value": null,
+							"description": "nullable|string|integer",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employees",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODZlM2U4NGM5NjAwZWY4Yjg3M2I1NGE0Yjk1ODYzN2VjZDRhNWQxNmY0ZjI2YmE2MDZhZWE1NzFlZjcyODRjNmIwMTA1YWY0MTllMTYyODUiLCJpYXQiOjE2MjMzNDg4MDYsIm5iZiI6MTYyMzM0ODgwNiwiZXhwIjoxNjU0ODg0ODA2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rR7jFQnLMimx4JGSZCojn5dJLjuyfpbGcwWOjamIO2wOC4SloeUHBJ73Z2uoHE7TbCupFuEjematifxvFQUqUxyCLJpHA2Qj9jhlcFCwCFStRtUD398XCq4p_t9emnW-nPniDREOkuzSLyZcY0DBrqJIWNBejWkgjY9AZDdxrHNzXdDsTFSVPlm9L05_0-pWiOTpmmBActZ8mh-ooldy0pc-IGDcqllj_c-MXOkK_Qh8rf0JomnTVjfUJG-BKRDR6xIrKsq_CPnmJZmMPMcXP_FWhR1xYeGc6yjuvNDymn8gPGB966RXZ7DSsS1anF4h-yZhmnVmlg9N7fBSLNqrk-1aFJ9b8C4RBrZoiEDywr0Xuv8twlH2XMQBjPRs8j3-aGw6v_FZnBMUG-VxpUg9eeDmMQ-e5qZ6mpWecqJt8_gpPZBEy-r5vyRaYDfUWJRbfsAAjvz3o46-1-iIfqy1JV73UX95Gke2Xp1CLB46KRVLvnXI8qHT1Hvd3HCG55hGa-JKhvCti5uXsaYStfr1K8YD22Rdxis2CmwbdxK0zySDSKePbjC5Yf-WmK9fbs2Hr9llau9ddJqBL_fI0n82n2pkuclac_G2K7wWo2RMER6KvnTZkMALzV4JG9Uyu_KMBON-ZOHaN5iI5g3Sl3fgXzt_k950T9zzouDOSSTSo9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employees?first_name=testing employee&last_name=123&company_id=5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "testing employee",
+							"description": "required|first_name"
+						},
+						{
+							"key": "last_name",
+							"value": "123",
+							"description": "required |last_name"
+						},
+						{
+							"key": "company_id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "company{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODZlM2U4NGM5NjAwZWY4Yjg3M2I1NGE0Yjk1ODYzN2VjZDRhNWQxNmY0ZjI2YmE2MDZhZWE1NzFlZjcyODRjNmIwMTA1YWY0MTllMTYyODUiLCJpYXQiOjE2MjMzNDg4MDYsIm5iZiI6MTYyMzM0ODgwNiwiZXhwIjoxNjU0ODg0ODA2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rR7jFQnLMimx4JGSZCojn5dJLjuyfpbGcwWOjamIO2wOC4SloeUHBJ73Z2uoHE7TbCupFuEjematifxvFQUqUxyCLJpHA2Qj9jhlcFCwCFStRtUD398XCq4p_t9emnW-nPniDREOkuzSLyZcY0DBrqJIWNBejWkgjY9AZDdxrHNzXdDsTFSVPlm9L05_0-pWiOTpmmBActZ8mh-ooldy0pc-IGDcqllj_c-MXOkK_Qh8rf0JomnTVjfUJG-BKRDR6xIrKsq_CPnmJZmMPMcXP_FWhR1xYeGc6yjuvNDymn8gPGB966RXZ7DSsS1anF4h-yZhmnVmlg9N7fBSLNqrk-1aFJ9b8C4RBrZoiEDywr0Xuv8twlH2XMQBjPRs8j3-aGw6v_FZnBMUG-VxpUg9eeDmMQ-e5qZ6mpWecqJt8_gpPZBEy-r5vyRaYDfUWJRbfsAAjvz3o46-1-iIfqy1JV73UX95Gke2Xp1CLB46KRVLvnXI8qHT1Hvd3HCG55hGa-JKhvCti5uXsaYStfr1K8YD22Rdxis2CmwbdxK0zySDSKePbjC5Yf-WmK9fbs2Hr9llau9ddJqBL_fI0n82n2pkuclac_G2K7wWo2RMER6KvnTZkMALzV4JG9Uyu_KMBON-ZOHaN5iI5g3Sl3fgXzt_k950T9zzouDOSSTSo9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/companies/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companies",
+						"1"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employee{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODZlM2U4NGM5NjAwZWY4Yjg3M2I1NGE0Yjk1ODYzN2VjZDRhNWQxNmY0ZjI2YmE2MDZhZWE1NzFlZjcyODRjNmIwMTA1YWY0MTllMTYyODUiLCJpYXQiOjE2MjMzNDg4MDYsIm5iZiI6MTYyMzM0ODgwNiwiZXhwIjoxNjU0ODg0ODA2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rR7jFQnLMimx4JGSZCojn5dJLjuyfpbGcwWOjamIO2wOC4SloeUHBJ73Z2uoHE7TbCupFuEjematifxvFQUqUxyCLJpHA2Qj9jhlcFCwCFStRtUD398XCq4p_t9emnW-nPniDREOkuzSLyZcY0DBrqJIWNBejWkgjY9AZDdxrHNzXdDsTFSVPlm9L05_0-pWiOTpmmBActZ8mh-ooldy0pc-IGDcqllj_c-MXOkK_Qh8rf0JomnTVjfUJG-BKRDR6xIrKsq_CPnmJZmMPMcXP_FWhR1xYeGc6yjuvNDymn8gPGB966RXZ7DSsS1anF4h-yZhmnVmlg9N7fBSLNqrk-1aFJ9b8C4RBrZoiEDywr0Xuv8twlH2XMQBjPRs8j3-aGw6v_FZnBMUG-VxpUg9eeDmMQ-e5qZ6mpWecqJt8_gpPZBEy-r5vyRaYDfUWJRbfsAAjvz3o46-1-iIfqy1JV73UX95Gke2Xp1CLB46KRVLvnXI8qHT1Hvd3HCG55hGa-JKhvCti5uXsaYStfr1K8YD22Rdxis2CmwbdxK0zySDSKePbjC5Yf-WmK9fbs2Hr9llau9ddJqBL_fI0n82n2pkuclac_G2K7wWo2RMER6KvnTZkMALzV4JG9Uyu_KMBON-ZOHaN5iI5g3Sl3fgXzt_k950T9zzouDOSSTSo9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employees/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees",
+						"1"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "company",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODZlM2U4NGM5NjAwZWY4Yjg3M2I1NGE0Yjk1ODYzN2VjZDRhNWQxNmY0ZjI2YmE2MDZhZWE1NzFlZjcyODRjNmIwMTA1YWY0MTllMTYyODUiLCJpYXQiOjE2MjMzNDg4MDYsIm5iZiI6MTYyMzM0ODgwNiwiZXhwIjoxNjU0ODg0ODA2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rR7jFQnLMimx4JGSZCojn5dJLjuyfpbGcwWOjamIO2wOC4SloeUHBJ73Z2uoHE7TbCupFuEjematifxvFQUqUxyCLJpHA2Qj9jhlcFCwCFStRtUD398XCq4p_t9emnW-nPniDREOkuzSLyZcY0DBrqJIWNBejWkgjY9AZDdxrHNzXdDsTFSVPlm9L05_0-pWiOTpmmBActZ8mh-ooldy0pc-IGDcqllj_c-MXOkK_Qh8rf0JomnTVjfUJG-BKRDR6xIrKsq_CPnmJZmMPMcXP_FWhR1xYeGc6yjuvNDymn8gPGB966RXZ7DSsS1anF4h-yZhmnVmlg9N7fBSLNqrk-1aFJ9b8C4RBrZoiEDywr0Xuv8twlH2XMQBjPRs8j3-aGw6v_FZnBMUG-VxpUg9eeDmMQ-e5qZ6mpWecqJt8_gpPZBEy-r5vyRaYDfUWJRbfsAAjvz3o46-1-iIfqy1JV73UX95Gke2Xp1CLB46KRVLvnXI8qHT1Hvd3HCG55hGa-JKhvCti5uXsaYStfr1K8YD22Rdxis2CmwbdxK0zySDSKePbjC5Yf-WmK9fbs2Hr9llau9ddJqBL_fI0n82n2pkuclac_G2K7wWo2RMER6KvnTZkMALzV4JG9Uyu_KMBON-ZOHaN5iI5g3Sl3fgXzt_k950T9zzouDOSSTSo9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/companies/1?name=sidra &email=ssss@ss.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companies",
+						"1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "sidra "
+						},
+						{
+							"key": "email",
+							"value": "ssss@ss.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODZlM2U4NGM5NjAwZWY4Yjg3M2I1NGE0Yjk1ODYzN2VjZDRhNWQxNmY0ZjI2YmE2MDZhZWE1NzFlZjcyODRjNmIwMTA1YWY0MTllMTYyODUiLCJpYXQiOjE2MjMzNDg4MDYsIm5iZiI6MTYyMzM0ODgwNiwiZXhwIjoxNjU0ODg0ODA2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rR7jFQnLMimx4JGSZCojn5dJLjuyfpbGcwWOjamIO2wOC4SloeUHBJ73Z2uoHE7TbCupFuEjematifxvFQUqUxyCLJpHA2Qj9jhlcFCwCFStRtUD398XCq4p_t9emnW-nPniDREOkuzSLyZcY0DBrqJIWNBejWkgjY9AZDdxrHNzXdDsTFSVPlm9L05_0-pWiOTpmmBActZ8mh-ooldy0pc-IGDcqllj_c-MXOkK_Qh8rf0JomnTVjfUJG-BKRDR6xIrKsq_CPnmJZmMPMcXP_FWhR1xYeGc6yjuvNDymn8gPGB966RXZ7DSsS1anF4h-yZhmnVmlg9N7fBSLNqrk-1aFJ9b8C4RBrZoiEDywr0Xuv8twlH2XMQBjPRs8j3-aGw6v_FZnBMUG-VxpUg9eeDmMQ-e5qZ6mpWecqJt8_gpPZBEy-r5vyRaYDfUWJRbfsAAjvz3o46-1-iIfqy1JV73UX95Gke2Xp1CLB46KRVLvnXI8qHT1Hvd3HCG55hGa-JKhvCti5uXsaYStfr1K8YD22Rdxis2CmwbdxK0zySDSKePbjC5Yf-WmK9fbs2Hr9llau9ddJqBL_fI0n82n2pkuclac_G2K7wWo2RMER6KvnTZkMALzV4JG9Uyu_KMBON-ZOHaN5iI5g3Sl3fgXzt_k950T9zzouDOSSTSo9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employees/1?first_name=Asfa&last_name=Asad&company_id=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees",
+						"1"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Asfa"
+						},
+						{
+							"key": "last_name",
+							"value": "Asad"
+						},
+						{
+							"key": "company_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "company",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODZlM2U4NGM5NjAwZWY4Yjg3M2I1NGE0Yjk1ODYzN2VjZDRhNWQxNmY0ZjI2YmE2MDZhZWE1NzFlZjcyODRjNmIwMTA1YWY0MTllMTYyODUiLCJpYXQiOjE2MjMzNDg4MDYsIm5iZiI6MTYyMzM0ODgwNiwiZXhwIjoxNjU0ODg0ODA2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rR7jFQnLMimx4JGSZCojn5dJLjuyfpbGcwWOjamIO2wOC4SloeUHBJ73Z2uoHE7TbCupFuEjematifxvFQUqUxyCLJpHA2Qj9jhlcFCwCFStRtUD398XCq4p_t9emnW-nPniDREOkuzSLyZcY0DBrqJIWNBejWkgjY9AZDdxrHNzXdDsTFSVPlm9L05_0-pWiOTpmmBActZ8mh-ooldy0pc-IGDcqllj_c-MXOkK_Qh8rf0JomnTVjfUJG-BKRDR6xIrKsq_CPnmJZmMPMcXP_FWhR1xYeGc6yjuvNDymn8gPGB966RXZ7DSsS1anF4h-yZhmnVmlg9N7fBSLNqrk-1aFJ9b8C4RBrZoiEDywr0Xuv8twlH2XMQBjPRs8j3-aGw6v_FZnBMUG-VxpUg9eeDmMQ-e5qZ6mpWecqJt8_gpPZBEy-r5vyRaYDfUWJRbfsAAjvz3o46-1-iIfqy1JV73UX95Gke2Xp1CLB46KRVLvnXI8qHT1Hvd3HCG55hGa-JKhvCti5uXsaYStfr1K8YD22Rdxis2CmwbdxK0zySDSKePbjC5Yf-WmK9fbs2Hr9llau9ddJqBL_fI0n82n2pkuclac_G2K7wWo2RMER6KvnTZkMALzV4JG9Uyu_KMBON-ZOHaN5iI5g3Sl3fgXzt_k950T9zzouDOSSTSo9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/companies/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companies",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODZlM2U4NGM5NjAwZWY4Yjg3M2I1NGE0Yjk1ODYzN2VjZDRhNWQxNmY0ZjI2YmE2MDZhZWE1NzFlZjcyODRjNmIwMTA1YWY0MTllMTYyODUiLCJpYXQiOjE2MjMzNDg4MDYsIm5iZiI6MTYyMzM0ODgwNiwiZXhwIjoxNjU0ODg0ODA2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rR7jFQnLMimx4JGSZCojn5dJLjuyfpbGcwWOjamIO2wOC4SloeUHBJ73Z2uoHE7TbCupFuEjematifxvFQUqUxyCLJpHA2Qj9jhlcFCwCFStRtUD398XCq4p_t9emnW-nPniDREOkuzSLyZcY0DBrqJIWNBejWkgjY9AZDdxrHNzXdDsTFSVPlm9L05_0-pWiOTpmmBActZ8mh-ooldy0pc-IGDcqllj_c-MXOkK_Qh8rf0JomnTVjfUJG-BKRDR6xIrKsq_CPnmJZmMPMcXP_FWhR1xYeGc6yjuvNDymn8gPGB966RXZ7DSsS1anF4h-yZhmnVmlg9N7fBSLNqrk-1aFJ9b8C4RBrZoiEDywr0Xuv8twlH2XMQBjPRs8j3-aGw6v_FZnBMUG-VxpUg9eeDmMQ-e5qZ6mpWecqJt8_gpPZBEy-r5vyRaYDfUWJRbfsAAjvz3o46-1-iIfqy1JV73UX95Gke2Xp1CLB46KRVLvnXI8qHT1Hvd3HCG55hGa-JKhvCti5uXsaYStfr1K8YD22Rdxis2CmwbdxK0zySDSKePbjC5Yf-WmK9fbs2Hr9llau9ddJqBL_fI0n82n2pkuclac_G2K7wWo2RMER6KvnTZkMALzV4JG9Uyu_KMBON-ZOHaN5iI5g3Sl3fgXzt_k950T9zzouDOSSTSo9s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employees/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

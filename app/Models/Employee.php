@@ -14,7 +14,7 @@ class Employee extends Model
         'last_name'
     ];
 
-    /*public function company(){
+    public function company(){
         return $this->belongsTo(Company::class);
-    }*/
+    }
 }

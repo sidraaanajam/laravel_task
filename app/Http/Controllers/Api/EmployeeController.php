@@ -9,10 +9,10 @@ use Illuminate\Http\Request;
 class EmployeeController extends Controller
 {
     public function index(){
-        dd('ss');
-        /*$employee = Employee::with('company')->get()->toJson(JSON_PRETTY_PRINT);
-        dd($employee);
-        return response($employee, 200);*/
+
+        $employee = Employee::with('company')->get()->toJson(JSON_PRETTY_PRINT);
+
+        return response($employee, 200);
     }
     public function show($id) {
         if (Employee::where('id', $id)->exists()) {
